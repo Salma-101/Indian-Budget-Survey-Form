@@ -1,0 +1,93 @@
+<html>
+    <head>
+        <title>Indian Budget 2024 Survey Form</title>
+        <link rel="stylesheet" type="text/css" href="styling.css">
+        <script>
+            function showAlert() {
+                var userName = document.getElementById('name').value;
+                alert('Thank you for your feedback, ' + userName + '!');
+            }
+        </script>
+    </head>
+    <body>
+        <header>
+            <h1>India Budget 2024 Survey Form</h1>
+            <p>
+                <a href="https://www.indiabudget.gov.in/" target="_blank">Click here for more details</a>
+            </p>
+        </header>
+        
+        <div class="image-container">
+            <img src="india-budget.jpg" alt="India Budget 2024">
+        </div>
+        
+        <table class="budget-table">
+            <caption>Indian Budget 2024 Highlights</caption>
+            <tr>
+                <th>Sector</th>
+                <th>Allocation (in Crores)</th>
+                <th>Percentage Increase</th>
+            </tr>
+            <tr>
+                <td>Healthcare</td>
+                <td>2,50,000</td>
+                <td>15%</td>
+            </tr>
+            <tr>
+                <td>Education</td>
+                <td>1,80,000</td>
+                <td>10%</td>
+            </tr>
+            <tr>
+                <td>Infrastructure</td>
+                <td>3,20,000</td>
+                <td>20%</td>
+            </tr>
+        </table>
+        
+        <!-- Add the onsubmit handler to the form -->
+        <form class="feedback-form" onsubmit="return showAlert()">
+            <h3>Feedback Form</h3>
+            
+            <label for="name">Name:</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" autofocus>
+            
+            <label for="gender">Gender:</label>
+            <div class="gender-options">
+                <input type="radio" id="male" name="gender" value="Male">
+                <label for="male">Male</label>
+                <input type="radio" id="female" name="gender" value="Female">
+                <label for="female">Female</label>
+            </div>
+            
+            <label for="user_email">Email:</label>
+            <input type="email" id="user_email" name="user_email" placeholder="Enter your email">
+            
+            <label for="phone">Phone Number:</label>
+            <input type="tel" id="phone" name="phone" pattern="[0-9]{10}" maxlength="10" placeholder="Enter your phone number">
+            
+            <label for="state">State:</label>
+            <select id="state" name="state">
+                <option>Karnataka</option>
+                <option>Kerala</option>
+                <option>Andhra Pradesh</option>
+                <option>Tamil Nadu</option>
+                <option>Other</option>
+            </select>
+            
+            <label for="feedback">Feedback: <em>(required)</em></label>
+            <textarea id="feedback" rows="4" required></textarea>
+            
+            <p>
+                <input type="submit" name="submit" value="Submit">
+                <input type="reset" name="reset" value="Reset">
+            </p>
+        </form>
+        
+        <footer>
+            <hr>
+            <p>***</p>
+        </footer>
+
+    </body>
+</html>
